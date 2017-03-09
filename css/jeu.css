@@ -1,0 +1,42 @@
+
+
+html {
+	background-color: #F0F1BD;
+
+    }
+
+.riveg, .rived, .radeau{ 
+	position: absolute;
+  	height: 20vh;
+  	width: 32vw;
+  	bottom: 0;
+  	left: 0;
+  	border-top:2px dotted pink;
+  	border-bottom:40vh solid #6EC1B3;
+  
+} 
+
+
+  .riveg {
+  	
+  
+  	}
+
+  .rived {
+  	left:68vw;
+  }
+
+  .radeau {
+  	border-top:2px dotted purple;
+  	width: 36vw;
+  	left: 32vw;
+  	border-bottom:25vh solid #E83C6E;
+  }
+
+  .fleche-d {
+  	position: absolute;
+  	left: 32vw;
+
+  }
+
+

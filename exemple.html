@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+	<head>
+	
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/jeu.css">
+
+	</head>
+
+	<body>
+
+
+		<div class="riveg"> 
+		<p class="mouton"> mouton </p>
+		<p class="loup"> loup </p>
+		<p class="salade"> salade </p>
+
+		</div>
+
+		<div class="rived"> </div>
+		<div class="radeau"> 
+			<div class="fleche-g">&lt;</div>
+			<div class="fleche-d">&gt;</div>
+		</div>
+
+
+	<script src="jquery.js"></script>
+	<script src="jquery-ui.js"></script>
+	<script>
+
+
+	var text1 = "mouton";
+	var text2 = "loup";
+	var text3 = "salade";
+
+	var text1 = 1; text2 = 2; text3 = 3;
+	var result = true;
+
+	$( ".riveg" ).on( "click", "p", function() {
+  		$(this).appendTo(".radeau");
+
+	});
+
+	$( ".rived" ).on( "click", "p", function() {
+  		$(this).appendTo(".radeau");
+	});
+
+	$( ".radeau" ).on( "click", ".fleche-g", function() {
+  		$(".radeau p").appendTo(".riveg");
+	});
+
+	$( ".radeau" ).on( "click", ".fleche-d", function() {
+  		$(".radeau p").appendTo(".rived");
+	});
+
+
+
+
+
+	
+
+</script>
+	
+			
+	</body>
+</html>
