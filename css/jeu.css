@@ -39,4 +39,20 @@ html {
 
   }
 
+  .gauche {
+    width: 10vw;
+    left: 0;
+  }
+
+  .centre {
+    width: 20vw;
+    left:10vw;
+  }
+
+  .droite {
+    width: 30vw;
+    left:20vw;
+  }
+
+
 
