@@ -13,14 +13,12 @@ html {
   	left: 0;
   	border-top:2px dotted pink;
   	border-bottom:40vh solid #6EC1B3;
+
+    display: -webkit-flex;
+    display: flex;
   
 } 
 
-
-  .riveg {
-  	
-  
-  	}
 
   .rived {
   	left:68vw;
@@ -39,20 +37,13 @@ html {
 
   }
 
-  .gauche {
-    width: 10vw;
-    left: 0;
+  .mouton, .loup, .salade{
+    border: 0px solid;
+    width: 2em;
+    margin: auto;
+    text-align: center;  
   }
 
-  .centre {
-    width: 20vw;
-    left:10vw;
-  }
-
-  .droite {
-    width: 30vw;
-    left:20vw;
-  }
 
 
 
