@@ -75,17 +75,45 @@
 
 	$( ".radeau" ).on( "click", ".fleche-g", function() {
   		$(".radeau p").appendTo(".riveg");
+  		manger();
 	});
 
 	$( ".radeau" ).on( "click", ".fleche-d", function() {
   		$(".radeau p").appendTo(".rived");
+  		manger();
 	});
 
 
-	//function manger {
+	function manger() {
 
-		//if ( $( "mouton"))
-	//}
+		if ( $( ".rived .mouton").length) {
+
+			if ( $( ".rived .salade").length) {
+
+				kaputt();
+
+			}
+
+		} 
+
+	};
+
+	function kaputt() {
+
+		// alert("erreur fatale");
+		// vibrations...
+		
+		// Clignotement = changer couleur de fond
+		$("html").css( "background-color", "#E83C6E" ).wait(300).css( "background-color", "#FFF" );
+
+
+
+		// recharger la page.
+		// location.reload();
+
+
+	};
+
 
 
 
