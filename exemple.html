@@ -20,6 +20,7 @@
 			<p class="salade"> @ </p>
 
 
+
 		</div><!-- .riveg -->
 
 		<div class="rived"> 
@@ -39,20 +40,37 @@
 	<script>
 
 
-	var text1 = "mouton";
-	var text2 = "loup";
-	var text3 = "salade";
 
-	var text1 = 1; text2 = 2; text3 = 3;
-	var result = true;
+
 
 	$( ".riveg" ).on( "click", "p", function() {
-  		$(this).appendTo(".radeau");
+
+  		if ( $( ".radeau p" ).length ) {
+ 
+		    alert("occupé!");
+		 
+		} else {
+
+			$(this).appendTo(".radeau");
+
+			}
 
 	});
 
 	$( ".rived" ).on( "click", "p", function() {
-  		$(this).appendTo(".radeau");
+  		
+		// si le radeau a un occupant = erreur
+		if ( $( ".radeau p" ).length ) {
+ 
+		    alert("occupé!");
+		 
+		} else {
+
+			$(this).appendTo(".radeau");
+
+		}
+
+  		
 	});
 
 	$( ".radeau" ).on( "click", ".fleche-g", function() {
@@ -62,6 +80,19 @@
 	$( ".radeau" ).on( "click", ".fleche-d", function() {
   		$(".radeau p").appendTo(".rived");
 	});
+
+
+	//function manger {
+
+		//if ( $( "mouton"))
+	//}
+
+
+
+	
+
+	
+
 
 
 

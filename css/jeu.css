@@ -41,8 +41,13 @@ html {
     border: 0px solid;
     width: 2em;
     margin: auto;
-    text-align: center;  
+    text-align: center; 
+    text-decoration: blink; 
   }
+
+
+
+   
 
 
 
