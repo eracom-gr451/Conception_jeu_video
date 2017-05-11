@@ -4,6 +4,7 @@
 	
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/jeu.css">
+		
 
 	</head>
 
@@ -34,6 +35,7 @@
 		</div>
 
 		</font>
+
 
 	<script src="jquery.js"></script>
 	<script src="jquery-ui.js"></script>
@@ -86,21 +88,26 @@
 
 	function manger() {
 
-		if ( $( ".rived .mouton").length) {
+		if ( $( ".rived .mouton").length && $( ".rived .salade").length && $( ".rived .loup").length  ) {
 
-			if ( $( ".rived .salade").length) {
+			alert("gagné!");
 
-				kaputt();
+		} else if ( $( ".rived .mouton").length && $( ".rived .salade").length ) {
 
-			}
+			kaputt();
 
-		} 
+
+		} else if ( $( ".rived .mouton").length && $( ".rived .loup").length ) {
+
+			kaputt();
+
+		}//regarder si fonctionne vraiment!!!
 
 	};
 
 	function kaputt() {
 
-		// alert("erreur fatale");
+		
 		// vibrations...
 		
 		// Clignotement = changer couleur de fond
@@ -111,12 +118,7 @@
 
 
 
-		
-
-
 		// recharger la page.
-		
-
 
 	};
 
@@ -124,19 +126,46 @@
 
 
 
+		// fonction qui s'active quand les 3 symboles sont sur la rived
+
+
+
+		
+
+		//} else {
+
+			//();
+
+
+
+
+
+
+
+
+			
+
+
+	
+		 
+
+
+		
+
 
 
 
 	
 
-	
+
+		
+
+
+		
+		
 
 
 
-
-
-
-	
 
 </script>
 	
