@@ -1,10 +1,10 @@
 <!doctype html>
 <html>
 	<head>
-	
+
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/jeu.css">
-		
+
 
 	</head>
 
@@ -12,7 +12,7 @@
 
 		<font size=" 20pt">
 
-		<div class="riveg"> 
+		<div class="riveg">
 
 			<p class="mouton"> ȣ </p>
 
@@ -24,12 +24,12 @@
 
 		</div><!-- .riveg -->
 
-		<div class="rived"> 
+		<div class="rived">
 
 		</div>
-		
 
-		<div class="radeau"> 
+
+		<div class="radeau">
 			<div class="fleche-g">&lt;</div>
 			<div class="fleche-d">&gt;</div>
 		</div>
@@ -39,18 +39,16 @@
 
 	<script src="jquery.js"></script>
 	<script src="jquery-ui.js"></script>
+	<script src="https://eracom-gr451.github.io/projet-canvas-launcher/nextlevel.js"></script>
 	<script>
-
-
-
 
 
 	$( ".riveg" ).on( "click", "p", function() {
 
   		if ( $( ".radeau p" ).length ) {
- 
+
 		    alert("occupé!");
-		 
+
 		} else {
 
 			$(this).appendTo(".radeau");
@@ -60,19 +58,19 @@
 	});
 
 	$( ".rived" ).on( "click", "p", function() {
-  		
+
 		// si le radeau a un occupant = erreur
 		if ( $( ".radeau p" ).length ) {
- 
+
 		    alert("occupé!");
-		 
+
 		} else {
 
 			$(this).appendTo(".radeau");
 
 		}
 
-  		
+
 	});
 
 	$( ".radeau" ).on( "click", ".fleche-g", function() {
@@ -92,6 +90,10 @@
 
 			alert("gagné!");
 
+			// déclencher la fin de niveau
+			NextLevel();
+
+
 		} else if ( $( ".rived .mouton").length && $( ".rived .salade").length ) {
 
 			kaputt();
@@ -107,30 +109,21 @@
 
 	function kaputt() {
 
-		
 		// vibrations...
-		
+
 		// Clignotement = changer couleur de fond
-		$("html").css( "background-color", "#E83C6E" ).slideUp(600).delay(900).css( "background-color", "#F0F1BD").fadeIn(400); 
+		$("html").css( "background-color", "#E83C6E" ).slideUp(600).delay(900).css( "background-color", "#F0F1BD").fadeIn(400);
 
-		alert("ERREUR FATALE")
-
-
-
+		alert("ERREUR FATALE");
 
 		// recharger la page.
+		window.location.reload(true);
 
 	};
 
 
-
-
-
 		// fonction qui s'active quand les 3 symboles sont sur la rived
 
-
-
-		
 
 		//} else {
 
@@ -143,32 +136,11 @@
 
 
 
-			
-
-
-	
-		 
-
-
-		
-
-
-
-
-	
-
-
-		
-
-
-		
-		
-
 
 
 
 </script>
-	
-	<script src="https://eracom-gr451.github.io/projet-canvas-launcher/nextlevel.js"></script>
+
+
 	</body>
 </html>
